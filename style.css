@@ -66,3 +66,195 @@ h2 {
 	height: 150px;
 	width: 150px;
 }
+
+body, h1, h2, ul, li, a {
+    margin: 0; /* Removes the default margining from the page */
+    padding: 0; /* Removes the default padding from the page */
+    font-family: sans-serif, "Ubuntu", Arial, Helvetica /* Font families for the webpage */
+} /* Removes default margining and padding and sets the font families for the webpage, applying to <body>, <h1>, <h2>, <ul>, <li>, and <a> elements */
+
+body {
+    background: radial-gradient(circle, rgb(0,0,0), rgb(40,0,40)); /* Gradient dark purple background */
+} /* Gives the body of the website a dark purple and black radial gradient background */
+
+h1 {
+    color: cyan; /* Cyan color for the text */
+    font-size: 2em; /* Multiplies the size of the font by 2 */
+    margin-bottom: 0.5em; /* Multiplies the space at the bottom of an element by 1/2 */
+} /* Cyan color and font size and spacing adjustments for <h1> element */
+
+h2 {
+    color: plum; /* Plum color for the text */
+    font-size: 1.5em; /* Multiplies the size of the font by 1.5 */
+    margin-bottom: 1em; /* Multiplies the space at the bottom of the element by 1 */
+} /* Plum color and font size and spacing adjustments for <h2> element */
+
+h3 {
+    color: salmon; /* Salmon color for the text */
+    font-size: 1.15em; /* Multiplies the size of the font by 1.15 */
+    margin-bottom: 1em; /* Multiplies the space at the bottom of the element by 1 */
+} /* Salmon color and font size and spacing adjustments for <h3> element */
+
+ul {
+    list-style-type: none; /* Removes bullet points */
+    margin-left: 20px; /* Gives a left margin (gap) of 20px */
+    margin-bottom: 12px; /* Gives a bottom margin (gap) of 12px */
+} /* Defines no list type and margins for unordered list */
+
+ul li {
+    margin-bottom: 5px; /* Gives a bottom margin (gap) of 5px */
+} /* Bottom margin for <ul> and <li> elements */
+
+a {
+    display: inline-block; /* Applies inline blocking to image */
+    color: yellow; /* Yellow color for the text */
+    text-decoration: none; /* Removes the underlining from links */
+    padding: 5px 10px; /* 5px vertical padding, 10px horizontal padding */
+    border: 3px solid #00FFFF; /* A 3px solid cyan colored border around links */
+    transition: all 0.3s ease; /* Used for a gradual color changing transition for hover effects */
+} /* Makes <a> elements have cyan border and yellow font with an animation transition */
+
+a:hover {
+    background-color: green; /* Green background for links when hovering */
+    color: white; /* White text color for links when hovering */
+    border: 3px solid yellow; /* Yellow border color for links when hovering */
+} /* Adds green background, white font, and yellow border when hovering over <a> elements */
+
+.center-text {
+    text-align: center; /* Gives center alignment for text */
+} /* Centers-aligns text */
+
+.center-image {
+    display: block; /* Makes image a block element */
+    margin-left: auto; /* Automatically adjusts leftwards margin for images */
+    margin-right: auto; /* Automatically adjusts rightwards margin for images */
+} /* Center-aligns images */
+
+.img30 {
+    height: auto; /* Automatically adjusts the height of images to maintain the aspect ratio */
+    width: 30%; /* Makes images 30% of the width of the element it is contained in */
+} /* Makes images 30% of the width of the browser window or element */
+
+.img100 {
+    height: auto; /* Automatically adjusts the height of images to maintain the aspect ratio */
+    width: 100% /* Makes images 100% of the width of the element it is contained in */
+} /* Makes images 100% of the width of the browser window or element */
+
+.BorderedTextDashed {
+    border: 10px dashed greenyellow; /* Dashed green-yellow border with a thickness of 10px */
+} /* Border that is a dashed line and is a green-yellow color */
+
+.BorderedTextRounded {
+    border: 10px solid red; /* Solid red border with a thickness of 10px */
+    border-radius: 50%; /* Rounds borders to a circular shape with 50% radius */
+} /* Border that is rounded and is a red color */
+
+.GreenBorderedTextRounded {
+    border: 5px solid green; /* Solid green border with a thickness of 5px */
+    border-radius: 50%; /* Rounds borders to a circular shape with 50% radius */
+} /* Border that is rounded and is a green color */
+
+.TableDesign {
+    border: 5px ridge red; /* Ridged red border with a thickness of 5px */
+    color: greenyellow; /* Green-yellow color for the text */
+    width: 100%; /* 100% width of the parent element for tables */
+    text-align: center; /* Gives center alignment for text */
+    font-size: 1em; /* Multiplies the font size of text by 1 */
+    margin-bottom: 1em; /* Multiplies the space at the bottom of the element by 1 */
+} /* Border for tables that is ridged and is a red color with green-yellow text */
+
+.bold {
+    font-weight: bold; /* Gives a bold thickness to text */
+} /* Bolds text */
+
+.GreenYellowFont {
+    color: greenyellow; /* Green-yellow color for the text */
+} /* Applies a green-yellow text color */
+
+#footer {
+    color: pink; /* Pink color for the text */
+    overflow: auto; /* Adds scroll bars if the contents overflow */
+} /* Makes scrollbars appear if the content overflows the viewport */
+
+.video-background {
+    position: fixed; /* Makes the background stay in place regardless of what happens on the webpage */
+    top: 0; /* Aligns background to the top */
+    left: 0; /* Aligns background to the left */
+    width: 100%; /* Makes background take 100% of the width of the page */
+    height: 100%; /* Makes background take 100% of the height of the page */
+    z-index: -1; /* Sends video background behind the rest of the elements */
+    overflow: auto; /* Adds scrollbars to the page if the contents overflow */
+} /* Makes videos fullscreen, behind the main text, and enables scrollbars */
+
+.video-background video {
+    min-width: 100%; /* Makes the minimum width of the background video 100% */
+    min-height: 100%; /* Makes the minimum height of the background video 100% */
+    width: auto; /* Automatically adjusts the width of the video background */
+    height: auto; /* Automatically adjusts the height of the video background */
+    position: absolute; /* Places the background relative to the container it's in */
+    top: 50%; /* Centers video background vertically */
+    left: 50%; /* Centers video background horizontally */
+    transform: translate(-50%, -50%); /* Centers video background horizontally and vertically using transform */
+    filter: brightness(0.25); /* Darkens video background to 25% brightness for better readability */
+} /* Centers video backgrounds, applies minimum width and height to be fullscreen, and applies 25% background brightness for better readability */
+
+.h2Underline {
+    text-decoration: underline; /* Gives underlining to text */
+} /* Underlines <h2> elements */
+
+.ImageGap {
+    display: flex; /* Gives flexbox properties for layout */
+    justify-content: space-between; /* Evenly distributes space between pictures (gives the gaps) */
+    align-items: center; /* Aligns images to center vertically with each other side by side */
+    padding-bottom: 20px; /* Adds padding (gap) that is 20px long to the bottom of image */
+} /* Applies horizontal gaps across the page and creates small gaps on the bottom of images */
+
+.MiniImageBackground {
+    width: auto; /* Automatically adjusts the width of the mini image background */
+    height: auto; /* Automatically adjusts the height of the mini image background */
+    top: 50%; /* Centers mini image background vertically */
+    left: 50%; /* Centers mini image background horizontally */
+    transform: translate(-50%, -50%); /* Centers mini image background horizontally and vertically using transform */
+    filter: brightness(0.5); /* Darkens mini image background to 50% brightness for better readability */
+    position: fixed; /* Makes the background stay in place regardless of what happens on the webpage */
+    z-index: -1; /* Sends mini image background behind the rest of the elements */
+    overflow: auto; /* Adds scrollbars to the page if the contents overflow */
+} /* Applies an unaltered sized image with 50% brightness for better readability, and is designed to let the standard color CSS background form around it */
+
+.iframeSize {
+    width: 30%; /* Sets the width of embed YouTube video windows to 30% of their parent element */
+    max-width: 640px; /* Sets the max width of embed YouTube video windows to 640px */
+    height: 360px; /* Sets the height of embed YouTube video windows to 360px */
+    border: 0px; /* Ensures that there are no borders around embed YouTube video windows */
+} /* Adjusts the width and height of embed YouTube video windows */
+
+.SmallBottomPadding {
+    padding-bottom: 5px; /* Applies a small amount of bottom padding (a gap), being 5px */
+} /* Applies a very small amount of bottom padding (a gap) on the bottom of elements, being 5px */
+
+.SmallTopPadding {
+    padding-top: 10px; /* Applies a small amount of top padding (a gap), being 10px */
+} /* Applies a very small amount of bottom padding (a gap) on the bottom of elements, being 10px */
+
+.BottomPadding {
+    padding-bottom: 20px; /* Adds padding (gap) that is 20px long to the bottom of element */
+} /* Applies a medium sized gap to the bottom of elements */
+
+.BulletUnorderedList {
+    list-style-type: disc; /* Defined bullet type as disc */
+    color: plum; /* Plum color for the text */
+    font-size: 1.15em; /* Multiplies the size of the font by 1.15 */
+    margin-bottom: 1em; /* Multiplies the space at the bottom of the bulleted list by 1 */
+} /* Applied disc-style bullets, the plum text color, and font size and spacing adjustments to unordered lists */
+
+.BrightnessText80 {
+    filter: brightness(0.8); /* Applies 80% brightness to text in order to give text around it better contrast */
+} /* Applies 80% brightness to text */
+
+.ThinBorder {
+    border: 1px solid plum; /* Solid very thin plum border with a thickness of 1px */
+} /* Applies a very thin solid border with the plum color to images */
+
+img {
+    border-radius: 10px; /* Applies a 10px radius for borders of images to create rounded corners */
+}
