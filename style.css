@@ -75,7 +75,8 @@ body, h1, h2, ul, li, a {
 
 body {
     background: radial-gradient(circle, rgb(0,0,0), rgb(40,0,40)); /* Gradient dark purple background */
-} /* Gives the body of the website a dark purple and black radial gradient background */
+    color: white; /* White color for the text */
+} /* Gives the body of the website a dark purple and black radial gradient background and white text color */
 
 h1 {
     color: cyan; /* Cyan color for the text */
