@@ -19,7 +19,29 @@ h2 {
 }
 
 #button-play-again {
-	margin: 0 auto;
+    margin: 0 auto;
+    background-color: #40BFFF; /* 75% cyan, 25% blue hex code */
+    color: white; /* White color for the text */
+    border: none; /* Removes the border from the button */
+    padding: 10px 20px; /* Adds 10px vertical and 20px horizontal padding to the button */
+    font-size: 1em; /* Multiplies the size of the font by 1 */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+    border-radius: 5px; /* Rounds the corners of the button */
+    transition: background-color 0.3s ease; /* Adds a smooth transition effect for the background color when the color changes */
+    text-transform: uppercase; /* Converts all text to uppercase */
+    font-weight: bold; /* Bolds the text */
+    outline: none; /* Removes the outline when the button is focused */
+    margin-bottom: 20px; /* Adds a 20px gap below the button */
+}
+
+#button-play-again:hover {
+    background-color: #1E90FF; /* Slightly darker blue color when hovering */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle black shadow effect when hovering */
+}
+
+#button-play-again:active {
+    transform: scale(0.95); /* Scales the button to 95% of its normal size when clicked */
+    background-color: #007BFF; /* An even darker shade of blue when being clicked on */
 }
 
 #container {
