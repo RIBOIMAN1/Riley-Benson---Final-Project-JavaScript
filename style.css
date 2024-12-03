@@ -32,17 +32,17 @@ h2 {
     font-weight: bold; /* Bolds the text */
     outline: none; /* Removes the outline when the button is focused */
     margin-bottom: 20px; /* Adds a 20px gap below the button */
-}
+} /* Styles for the "Play again!" button with centered layout, styling, padding, and interactive effects such as transitions */
 
 #button-play-again:hover {
     background-color: #1E90FF; /* Slightly darker blue color when hovering */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle black shadow effect when hovering */
-}
+} /* Applies hover state with darker background and a subtle shadow effect to the button */
 
 #button-play-again:active {
     transform: scale(0.95); /* Scales the button to 95% of its normal size when clicked */
     background-color: #007BFF; /* An even darker shade of blue when being clicked on */
-}
+} /* Applies active state with button scaling and darkest background color */
 
 #container {
 	margin: 2em auto;

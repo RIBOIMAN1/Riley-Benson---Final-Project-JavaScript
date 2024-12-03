@@ -11,4 +11,14 @@ document.addEventListener('DOMContentLoaded', () => { // Selects important eleme
     let gameActive = true; // Tracks whether or not the game is active
     let scoreX = 0; // Score for player "X" to start at 0
     let scoreO = 0; // Score for player "O" to start at 0
-});
+    // Winning three in a row patterns in Tic-Tac-Toe
+    const winningCombinations = [
+        [0, 1, 2], // Top row of squares
+        [3, 4, 5], // Middle row of squares
+        [6, 7, 8], // Bottom row of squares
+        [0, 3, 6], // Left column of squares
+        [1, 4, 7], // Middle column of squares
+        [2, 5, 8], // Right column of squares
+        [0, 4, 8], // Diagonal top-left square to the bottom-right square
+        [2, 4, 6]  // Diagonal top-right square to the bottom-left square
+]});
