@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => { // Selects important eleme
         [2, 4, 6]  // Diagonal top-right square to the bottom-left square
     ];
     // Function that handles when players click squares on the board
-    const handleSquareClick = (event) => {
+    const handleSquareClick = (event) => { // Handles the events relating to square clicks
         // Obtains the index from the square the user clicked on using its ID
         const squareIndex = parseInt(event.target.id.split('-')[1]); // Uses the clicked square's id to parse the square index
         // Checks for both squares being filled and the inactivity of the game
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => { // Selects important eleme
         updateTurnDisplay(); // Updates the display to show the current player's turn
     };
     // Function that checks if one of the players has won the game
-    const checkWin = (player) => { // const comand which checks to see if one of the players has won the game
+    const checkWin = (player) => { // const command which checks to see if one of the players has won the game
         // Checks each possible winning combo
         return winningCombinations.some(combination => { // Return command that checks each possible winning Tic-Tac-Toe pattern
             // If all of the squares in a possible wining pattern are filled by the same player
@@ -60,5 +60,21 @@ document.addEventListener('DOMContentLoaded', () => { // Selects important eleme
     const checkDraw = () => { // const command checking to see if the game has ended in a draw
         // Checks to see if all the game squares are filled
         return gameBoard.every(square => square !== ''); // return command that checks every square on the board for a fill status
+    };
+    // Function that updates the score of the game
+    const updateScore = () => { // const command that updates the Tic-Tac-Toe score
+        // Increments the score for the winning player
+        if (currentPlayer === 'X') { // Checks if the current player is "X"
+            scoreX++; // Increments the score by one for player "X"
+            scoreboardX.textContent = scoreX; // Updates the scoreboard scoring for player "X"
+        } else { // Falls on player "O" if the current player is not player "X"
+            scoreO++; // Increments the score by one for player "O"
+            scoreboardO.textContent = scoreO; // Updates the scoreboard scoring for player "O"
+        }
+    };
+    // Function that announces the game result
+    const announceResult = (message) => { // const command that announces the results of the game
+        // Updates the turn display with the results of the game
+        turnDisplay.textContent = message; // Sets the turn display to show the result
     };
 });
