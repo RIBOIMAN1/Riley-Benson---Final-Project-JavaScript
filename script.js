@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => { // Selects important eleme
     let currentPlayer = 'X'; // Starts the game with player "X"
     let gameBoard = ['', '', '', '', '', '', '', '', '']; // Represents the 3x3 Tic-Tac-Toe board
     let gameActive = true; // Tracks whether or not the game is active
-    let scoreX = 0; // Score for player "X" to start at 0
-    let scoreO = 0; // Score for player "O" to start at 0
+    let scoreX = localStorage.getItem('scoreX') ? parseInt(localStorage.getItem('scoreX')) : 0; // Obtains the score for player "X" from localStorage or sets it to 0 if unavailable from there
+    let scoreO = localStorage.getItem('scoreO') ? parseInt(localStorage.getItem('scoreO')) : 0; // Obtains the score for player "O" from localStorage or sets it to 0 if unavailable from there
     // Winning three in a row patterns in Tic-Tac-Toe
     const winningCombinations = [
         [0, 1, 2], // Top row of squares
@@ -62,13 +62,15 @@ document.addEventListener('DOMContentLoaded', () => { // Selects important eleme
         return gameBoard.every(square => square !== ''); // return command that checks every square on the board for a fill status
     };
     // Function that updates the score of the game
-    const updateScore = () => { // const command that updates the Tic-Tac-Toe score
+    const updateScore = (player) => { // const command that updates the Tic-Tac-Toe score
         // Increments the score for the winning player
-        if (currentPlayer === 'X') { // Checks if the current player is "X"
+        if (player === 'X') { // Checks if the current player is "X"
             scoreX++; // Increments the score by one for player "X"
+            localStorage.setItem('scoreX', scoreX); // Updates the score for player "X" inside of localStorage
             scoreboardX.textContent = scoreX; // Updates the scoreboard scoring for player "X"
         } else { // Falls on player "O" if the current player is not player "X"
             scoreO++; // Increments the score by one for player "O"
+            localStorage.setItem('scoreO', scoreO); // Updates the score for player "O" inside of localStorage
             scoreboardO.textContent = scoreO; // Updates the scoreboard scoring for player "O"
         }
     };
