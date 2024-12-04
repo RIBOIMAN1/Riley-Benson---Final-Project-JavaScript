@@ -96,4 +96,15 @@ document.addEventListener('DOMContentLoaded', () => { // Selects important eleme
         // Updates the turn display
         updateTurnDisplay(); // Updates the turn display to show the current player's turn
     };
+    // Adds click event listeners to all of the Tic-Tac-Toe squares
+    squares.forEach(square => { // Loops through each square on the game board
+        square.addEventListener('click', handleSquareClick); // Adds a click event listener to each square on the game board
+    });
+    // Attaches a click event handler to the "Play again!" button
+    playAgainButton.addEventListener('click', resetGame); // Adds a click event listener to the the "Play again!" button
+    // Initializes the turn display
+    updateTurnDisplay(); // Updates the turn display to show the current player's turn
+    // Initializes the players' scoreboard
+    scoreboardX.textContent = scoreX; // Sets the initial score display for player "X"
+    scoreboardO.textContent = scoreO; // Sets the initial score display for player "O"
 });
