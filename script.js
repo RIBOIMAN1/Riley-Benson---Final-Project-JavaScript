@@ -77,4 +77,23 @@ document.addEventListener('DOMContentLoaded', () => { // Selects important eleme
         // Updates the turn display with the results of the game
         turnDisplay.textContent = message; // Sets the turn display to show the result
     };
+    // Function that updates the turn display
+    const updateTurnDisplay = () => { // const command that updates the turn display
+        // Shows the current player's turn
+        turnDisplay.textContent = `${currentPlayer}'s Turn`; // Updates the turn display to show the current player's turn
+    };
+    // Function that resets the game
+    const resetGame = () => { // const command that resets Tic-Tac-Toe
+        // Clears the game board
+        gameBoard = ['', '', '', '', '', '', '', '', '']; // Resets the game board to an empty state without letters on it
+        // Resets the game UI
+        squares.forEach(square => { // Loops through each square on the game board
+            square.textContent = ''; // Wipes the content of each of the squares
+        });
+        // Resets the game state to its original form
+        currentPlayer = 'X'; // Resets the current player to player "X"
+        gameActive = true; // Reactivates the entire game
+        // Updates the turn display
+        updateTurnDisplay(); // Updates the turn display to show the current player's turn
+    };
 });
