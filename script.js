@@ -48,4 +48,17 @@ document.addEventListener('DOMContentLoaded', () => { // Selects important eleme
         currentPlayer = currentPlayer === 'X' ? 'O' : 'X'; // Switches the current player's letter
         updateTurnDisplay(); // Updates the display to show the current player's turn
     };
+    // Function that checks if one of the players has won the game
+    const checkWin = (player) => { // const comand which checks to see if one of the players has won the game
+        // Checks each possible winning combo
+        return winningCombinations.some(combination => { // Return command that checks each possible winning Tic-Tac-Toe pattern
+            // If all of the squares in a possible wining pattern are filled by the same player
+            return combination.every(index => gameBoard[index] === player); // Return command that acts based upon the succession of a Tic-Tac-Toe winning pattern
+        });
+    };
+    // Function that checks to see if the game resulted in a draw
+    const checkDraw = () => { // const command checking to see if the game has ended in a draw
+        // Checks to see if all the game squares are filled
+        return gameBoard.every(square => square !== ''); // return command that checks every square on the board for a fill status
+    };
 });
